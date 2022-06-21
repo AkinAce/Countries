@@ -14,9 +14,9 @@ class Display extends Component {
 
 async componentDidMount() {
     const { data: allCountries } = await axios.get("data.json"); 
-    const randomCountry = this.getRandomCountry()
-    this.setState({ allCountries, currentCountry:randomCountry });
+    this.setState({ allCountries});
 }
+//const randomCountry = this.getRandomCountry()
 //this.setState({ allCountries, currentCountry:randomCountry });
 
 handleRandom = () => {
