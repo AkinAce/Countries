@@ -7,16 +7,18 @@ import Icons from './images/icons.png'
 class Display extends Component {
     state = {
         allCountries:"",
-        currentCountry:this.getRandomCountry,
+        currentCountry:[{"flags":{"svg":"https://flagcdn.com/ng.svg"},"coatOfArms":{"svg":"https://mainfacts.com/media/images/coats_of_arms/ng.svg"},"name":{"common":"Nigeria","official":"Federal Republic of Nigeria"},"tld":[".ng"],"currencies":{"NGN":{"name":"Nigerian naira","symbol":"₦"}},"idd":{"root":"+2","suffixes":["34"]},"capital":["Abuja"],"region":"Africa","subregion":"Western Africa","languages":{"eng":"English"},"area":923768.0,"demonyms":{"eng":{"f":"Nigerian","m":"Nigerian"}},"population":206139587}],
         search:""    
       }; 
+//currentCountry:"",     
 
 async componentDidMount() {
     const { data: allCountries } = await axios.get("data.json"); 
     const randomCountry = this.getRandomCountry()
     this.setState({ allCountries, currentCountry:randomCountry });
 }
-  
+//this.setState({ allCountries, currentCountry:randomCountry });
+
 handleRandom = () => {
     const randomCountry = this.getRandomCountry()
     if(randomCountry){
