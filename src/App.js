@@ -1,13 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
+import Display from './display';
+import Footer from './footer';
+import './index.css';
 import './App.css';
 
 function App() {
   return (
-    <div className="Initial">
-      <div className='Initials'>
-      <h1>Cooking Awesomeness..Once Again.</h1>
+    <React.Fragment>
+      <div className="App total">
+        <Display/>
+        <footer>
+          <Footer/>
+         </footer> 
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 
