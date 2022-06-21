@@ -7,7 +7,7 @@ import Icons from './images/icons.png'
 class Display extends Component {
     state = {
         allCountries:"",
-        currentCountry:"",
+        currentCountry:this.getRandomCountry,
         search:""    
       }; 
 
